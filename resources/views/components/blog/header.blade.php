@@ -27,6 +27,13 @@
                 <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                     تماس
                 </a>
+                <a href="{{ route('posts.create') }}"
+                   class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center">
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    ایجاد پست
+                </a>
             </nav>
 
             <!-- Mobile Menu Button -->

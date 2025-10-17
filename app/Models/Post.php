@@ -41,7 +41,7 @@ class Post extends Model
     // }
 
 
-    // Relotions
+    // Relations
 
     public function user(): BelongsTo
     {
