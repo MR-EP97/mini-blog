@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 use function Pest\Laravel\json;
 use function PHPUnit\Framework\isEmpty;
+use Livewire\Attributes\On;
 
 class BlogIndex extends Component
 {
@@ -29,6 +30,17 @@ class BlogIndex extends Component
     public function mount(): void
     {
         $this->loadPosts();
+    }
+
+    #[On('searchUpdated')]
+    public function handleSearchUpdate($search): void
+    {
+        \Log::info($this->search . ' ---- ' . 'handleSearchUpdate');
+
+        $this->search = $search;
+        $this->page = 1;
+        $this->loadPosts();
+
     }
 
     public function loadPosts(): void
@@ -85,6 +97,8 @@ class BlogIndex extends Component
 
     public function clearSearch(): void
     {
+        \Log::info($this->search . ' ---- ' . 'clearSearch');
+
         $this->search = '';
         $this->page = 1;
         $this->loadPosts();

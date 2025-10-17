@@ -23,7 +23,8 @@ class PostIndexRequest extends FormRequest
     {
         return [
             'search' => 'string|nullable',
-            'per_page' => 'int|nullable'
+            'per_page' => 'int|nullable',
+            'page' => 'int|nullable'
         ];
     }
 }

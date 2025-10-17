@@ -3,7 +3,7 @@
         {{-- Search Input --}}
         <input
             type="text"
-            wire:model.debounce.500ms="search"
+            wire:model.live.debounce.500ms="search"
             placeholder="{{ $placeholder }}"
             class="w-full px-5 py-4 pr-12 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
         >
@@ -27,18 +27,18 @@
         </div>
 
         {{-- Clear Button --}}
-        @if($search && $showClearButton)
-            <button
-                wire:click="clearSearch"
-                type="button"
-                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors focus:outline-none"
-                title="پاک کردن جستجو"
-            >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-        @endif
+        {{--        @if($search && $showClearButton)--}}
+        {{--            <button--}}
+        {{--                wire:click="clearSearch"--}}
+        {{--                type="button"--}}
+        {{--                class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors focus:outline-none"--}}
+        {{--                title="پاک کردن جستجو"--}}
+        {{--            >--}}
+        {{--                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">--}}
+        {{--                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>--}}
+        {{--                </svg>--}}
+        {{--            </button>--}}
+        {{--        @endif--}}
     </div>
 
     {{-- Search Hint --}}

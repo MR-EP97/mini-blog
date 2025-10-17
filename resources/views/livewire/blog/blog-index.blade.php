@@ -8,8 +8,8 @@
 
     {{-- Search Box --}}
     <div class="mb-10">
-        @livewire('blog.search-bar')
-
+        {{--        @livewire('blog.search-bar')--}}
+        <livewire:blog.search-bar/>
         {{-- Search Results Info --}}
         @if($search && !$isLoading)
             <div class="mt-3 text-sm text-gray-600 text-center">
